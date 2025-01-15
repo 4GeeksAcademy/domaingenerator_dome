@@ -13,16 +13,74 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
+    <!--Navbar-->
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Domain Generator</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">I want to buy</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!--Main Content-->
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <!--Generator text js-->
+          <h1 class="mt-5">Your next domain is:</h1>
+          <ul>
+            <li><span id="domaingen" class="mt-5">google.com</span></li>
+          </ul>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <!--Generator button js-->
+          <button
+            type="submit"
+            class="btn btn-outline-success mt-5"
+            id="generate"
+          >
+            Generate Again
+          </button>
+        </div>
+        <div class="col-md-2"></div>
       </div>
     </div>
   </body>
