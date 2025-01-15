@@ -12,25 +12,13 @@ window.onload = function() {
 
 // creación de variables
 
-let pronoun = ["the", "our", "this", "that"];
+let pronoun = ["the", "our", "this"];
 
-let adj = ["amazing", "quick", "bright", "smart"];
+let adj = ["amazing", "quick", "bright"];
 
-let noun = ["jogger", "racoon", "engineer", "designer", "developer"];
+let noun = ["jogger", "racoon", "engineer", "designer"];
 
-let domain = [
-  ".com",
-  ".it",
-  ".es",
-  ".mx",
-  ".net",
-  ".org",
-  ".info",
-  ".biz",
-  ".co",
-  ".us",
-  ".ca"
-];
+let domain = [".com", ".it", ".es", ".mx"];
 
 function domainCombination() {
   let resultDomain = [];
@@ -48,15 +36,16 @@ function domainCombination() {
   return resultDomain;
 }
 document.getElementById("generate").addEventListener("click", function() {
-  let allDomain = domainCombination();
-  // let generateDomain = Math.floor(Math.random() * allDomain.length);
-  // let gen2 = allDomain[generateDomain];
-  // let generateDomain = domainCombination();
-  document.document.getElementById("domaingen").innerText = JSON.stringify(
-    allDomain
-  );
-});
+  const allDomain = domainCombination(); // Suponemos que esta función devuelve un array de dominios
+  const listaul = document.createElement("ul");
 
-// crear variables
-// cada variable debe de combinar 1 pronombre, un adj y un noun para generar un dominio.
-// se trata de un string combinator
+  for (let i = 0; i < allDomain.length; i++) {
+    const elemList = document.createElement("li");
+    elemList.textContent = allDomain[i]; //
+    listaul.appendChild(elemList); //
+  }
+
+  const container = document.getElementById("domaingen");
+  container.innerHTML = "";
+  container.appendChild(listaul);
+});

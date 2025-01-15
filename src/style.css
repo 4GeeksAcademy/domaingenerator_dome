@@ -1,1 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+#domaingen {
+  border: 1px solid red;
+  background: aliceblue;
+}
