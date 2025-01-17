@@ -36,13 +36,13 @@ function domainCombination() {
   return resultDomain;
 }
 document.getElementById("generate").addEventListener("click", function() {
-  const allDomain = domainCombination(); // Suponemos que esta función devuelve un array de dominios
+  const allDomain = domainCombination(); 
   const listaul = document.createElement("ul");
 
   for (let i = 0; i < allDomain.length; i++) {
     const elemList = document.createElement("li");
-    elemList.textContent = allDomain[i]; //
-    listaul.appendChild(elemList); //
+    elemList.textContent = allDomain[i]; 
+    listaul.appendChild(elemList);
   }
 
   const container = document.getElementById("domaingen");
