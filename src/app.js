@@ -5,23 +5,14 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
-
 // creación de variables
-
-let pronoun = ["the", "our", "this"];
-
-let adj = ["amazing", "quick", "bright"];
-
-let noun = ["jogger", "racoon", "engineer", "designer"];
-
-let domain = [".com", ".it", ".es", ".mx"];
 
 function domainCombination() {
   let resultDomain = [];
+  let pronoun = ["the", "our", "this"];
+  let adj = ["amazing", "quick", "bright"];
+  let noun = ["jogger", "racoon", "engineer", "designer"];
+  let domain = [".com", ".it", ".es", ".mx"];
 
   for (let i = 0; i < pronoun.length; i++) {
     for (let i2 = 0; i2 < adj.length; i2++) {
@@ -36,12 +27,12 @@ function domainCombination() {
   return resultDomain;
 }
 document.getElementById("generate").addEventListener("click", function() {
-  const allDomain = domainCombination(); 
+  const allDomain = domainCombination();
   const listaul = document.createElement("ul");
 
   for (let i = 0; i < allDomain.length; i++) {
     const elemList = document.createElement("li");
-    elemList.textContent = allDomain[i]; 
+    elemList.textContent = allDomain[i];
     listaul.appendChild(elemList);
   }
 
